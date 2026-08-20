@@ -1,6 +1,10 @@
 import React from 'react'
 
-import { GraduationCap, Award } from "lucide-react";
+import {
+  GraduationCap,
+  Award,
+  Bot,
+} from "lucide-react";
 
 const education = [
   {
@@ -33,6 +37,11 @@ const education = [
 ];
 
 const certificates = [
+  {
+    title: "Claude 101",
+    issuer: "Anthropic",
+    icon: "🤖",
+  },
   {
     title: "SEO: Structured Data & Schema Markup for Webmasters",
     issuer: "Udemy",
@@ -133,18 +142,28 @@ export default function Education() {
               Certificaciones
             </h3>
             <div className="flex flex-col gap-3">
-              {certificates.map((cert, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-4 rounded-xl bg-[#17161f] border border-purple-500/10 px-5 py-4 glow-card group"
-                >
-                  <span className="text-xl shrink-0">{cert.icon}</span>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-sm text-[#f0eef8] leading-snug truncate">{cert.title}</p>
-                    <p className="text-xs text-[#9b99b4] mt-0.5">{cert.issuer}</p>
+              {certificates.map((cert, i) => {
+                const Icon = cert.icon;
+
+                return (
+                  <div
+                    key={i}
+                    className="flex items-center gap-4 rounded-xl bg-[#17161f] border border-purple-500/10 px-5 py-4 glow-card group"
+                  >
+                    {typeof Icon === "function" ? (
+                      <span className="shrink-0 flex items-center justify-center w-6 h-6 text-purple-300">
+                        <Icon size={18} />
+                      </span>
+                    ) : (
+                      <span className="text-xl shrink-0">{cert.icon}</span>
+                    )}
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm text-[#f0eef8] leading-snug truncate">{cert.title}</p>
+                      <p className="text-xs text-[#9b99b4] mt-0.5">{cert.issuer}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
