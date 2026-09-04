@@ -56,6 +56,10 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+  .py-24 {
+    padding-block: calc(var(--spacing) * 15);
+  }
+
   html {
     width: 100%;
     overflow-x: hidden;
@@ -71,11 +75,11 @@ body {
   /* Fuerza que las cards no excedan el ancho */
   #education .flex.flex-col.gap-5, #education .flex.flex-col.gap-3 {
     width: 100%;
-    max-width: 81%;
+    max-width: 100%;
   }
 
   /* Apila título + estado */
-  #education .glow-card > div > div {
+  #education .glow-card > div > div.flex-1 > div {
     flex-direction: column !important;
     align-items: flex-start !important;
   }
