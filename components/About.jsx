@@ -2,15 +2,29 @@ import React from 'react'
 
 const techSkills = [
   { name: "HTML", level: 100 },
-  { name: "CSS / SCSS", level: 100 },
+  { name: "CSS", level: 100 },
   { name: "JavaScript", level: 100 },
   { name: "PHP", level: 100 },
+  { name: "React", level: 100 },
   { name: "WordPress", level: 100 },
   { name: "Joomla", level: 100 },
+  { name: "Elementor", level: 100 },
+  { name: "Betheme", level: 100 },
+  { name: "Framer", level: 100 },
+  { name: "WooCommerce", level: 100 },
   { name: "MySQL", level: 100 },
-  { name: "React", level: 100 },
+  { name: ".NET", level: 100 },
+  { name: "WCAG/Accesibilidad", level: 100 },
+  { name: "SEO técnico", level: 100 },
+  { name: "Tilopay", level: 100 },
   { name: "Figma", level: 100 },
   { name: "Photoshop", level: 100 },
+  { name: "cPanel", level: 100 },
+  { name: "GoDaddy", level: 100 },
+  { name: "Cloudways", level: 100 },
+  { name: "Hostinger", level: 100 },
+  { name: "Jira", level: 100 },
+  { name: "Git/GitHub", level: 100 },
 ];
 
 const softSkills = [
@@ -84,7 +98,7 @@ export const About = () => {
           {/* Tech skills */}
           <div className="glow-card rounded-2xl bg-[#17161f] p-8 border border-purple-500/10">
             <h3 className="text-lg font-semibold text-[#f0eef8] mb-6">Habilidades técnicas</h3>
-            <div className="flex flex-col gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-4">
               {techSkills.map((skill) => (
                 <SkillBar key={skill.name} {...skill} />
               ))}
