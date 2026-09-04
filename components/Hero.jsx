@@ -39,7 +39,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 justify-center lg:justify-start mb-8 animate-fade-up delay-300">
               <span className="flex items-center gap-2 text-sm text-[#9b99b4]">
                 <MapPin size={14} className="text-purple-400 shrink-0" />
-                Cartago, Costa Rica
+                San José, Costa Rica
               </span>
               <span className="flex items-center gap-2 text-sm text-[#9b99b4]">
                 <Mail size={14} className="text-purple-400 shrink-0" />

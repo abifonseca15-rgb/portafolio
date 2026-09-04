@@ -12,7 +12,7 @@ const contactItems = [
   {
     icon: MapPin,
     label: "Ubicación",
-    value: "Cartago, Costa Rica",
+    value: "San José, Costa Rica",
     href: "https://maps.google.com/?q=Cartago,Costa+Rica",
     color: "from-sky-500 to-cyan-500",
   },
