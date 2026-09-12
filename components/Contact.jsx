@@ -1,5 +1,5 @@
 import React from 'react'
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Linkedin, MapPin } from "lucide-react";
 
 const contactItems = [
   {
@@ -15,6 +15,13 @@ const contactItems = [
     value: "San José, Costa Rica",
     href: "https://maps.google.com/?q=Cartago,Costa+Rica",
     color: "from-sky-500 to-cyan-500",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "abigail-fonseca-contreras",
+    href: "https://www.linkedin.com/in/abigail-fonseca-contreras-62240514/",
+    color: "from-blue-500 to-sky-500",
   },
 ];
 
