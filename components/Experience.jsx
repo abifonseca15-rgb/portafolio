@@ -6,54 +6,21 @@ import { translations } from '../src/translations';
 const experiences = [
   {
     company: 'Freelance',
-    role: 'Web Developer – Full Stack',
-    period: 'Mar 2026 – Currently',
-    type: 'Remote',
     current: true,
-    highlights: [
-      'Built the websites elfrancesvillage.com in WordPress and clubsociale.com in Framer from concept and design through production deployment.',
-      'Developed and maintained a personal portfolio in React, using Git/GitHub version control and Vercel deployment.',
-      'Collaborated on the implementation and adjustment of .NET-based projects, supporting the evolution, maintenance, and improvement of web solutions.',
-      'Implemented technical SEO strategies to improve organic positioning, performance, and visibility across web projects.',
-      'Managed migration and administration of 5 websites, including domains, hosting, service configuration, and the Cloudways to Hostinger transition.',
-      'Administered domain accounts through GoDaddy to ensure continued service availability and operational continuity.',
-    ],
     tech: ['WordPress', 'Framer', 'React', 'Git/GitHub', 'Vercel', '.NET', 'Technical SEO', 'Cloudways', 'Hostinger', 'GoDaddy'],
     color: 'from-purple-500 to-indigo-500',
     accent: 'purple',
   },
   {
     company: 'ARWEB.com',
-    role: 'Web Developer – Front-End',
-    period: 'Aug 2020 – Feb 2026',
-    type: 'Full-time · Remote',
     current: true,
-    highlights: [
-      'Maintained and administered more than 10 websites built in WordPress and Joomla, including content updates, responsive design fixes, CMS and plugin updates, and performance optimizations.',
-      'Updated and improved more than 10 institutional and governmental sites by implementing WCAG AA accessibility criteria, adjusting structure, navigation, and content to improve access and usability.',
-      'Implemented and integrated the Tilopay payment gateway on 3 websites, enabling online payments and expanding e-commerce capabilities.',
-      'Performed corrective and evolutionary maintenance on websites, identifying and resolving functionality, display, and compatibility issues across devices.',
-      'Optimized websites through technical adjustments focused on improving performance, loading speed, and user experience.',
-    ],
     tech: ['HTML', 'CSS/SCSS', 'JavaScript', 'WordPress', 'Joomla', 'AA accessibility', 'Tilopay', 'PHP', 'WooCommerce'],
     color: 'from-purple-500 to-indigo-500',
     accent: 'purple',
   },
   {
     company: 'Pixel Design',
-    role: 'Web Developer – Full Stack',
-    period: 'Jun 2018 – Aug 2020',
-    type: 'Full-time · San José, CR',
     current: false,
-    highlights: [
-      'Developed a custom plugin to automatically sync inventory between an ERP and WooCommerce, eliminating manual product updates.',
-      'Developed and maintained more than 15 corporate sites using WordPress and PHP, integrating front-end and back-end solutions according to project requirements.',
-      'Developed and adjusted front-end and back-end solutions for WordPress-based projects, addressing functional requirements and site improvements.',
-      'Managed MySQL and SQL databases, performing migrations and backups to support data integrity, availability, and continuity.',
-      'Administered more than 15 websites through cPanel, managing hosting settings and coordinating technical incident follow-up with the data center.',
-      'Advised clients on hosting plan updates and selection based on capacity and site performance needs.',
-      'Managed domain purchases and renewals through GoDaddy and NIC Costa Rica to ensure continuity of associated website services.',
-    ],
     tech: ['WordPress', 'PHP', 'HTML/CSS', 'MySQL', 'JavaScript', 'cPanel', 'GoDaddy', 'WooCommerce'],
     color: 'from-indigo-500 to-sky-500',
     accent: 'indigo',
@@ -82,7 +49,10 @@ export default function Experience({ language, theme }) {
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500/40 via-indigo-500/30 to-transparent hidden md:block" />
 
           <div className="flex flex-col gap-10">
-            {experiences.map((exp, i) => (
+            {experiences.map((exp, i) => {
+              const job = copy.jobs[i];
+
+              return (
               <div key={i} className="relative md:pl-16">
                 <div className="absolute left-4 top-6 w-4 h-4 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 border-2 border-[#0f0f13] hidden md:block shadow-lg shadow-purple-900/50" />
 
@@ -93,18 +63,18 @@ export default function Experience({ language, theme }) {
                         <Briefcase size={18} className="text-white" />
                       </div>
                       <div>
-                        <h3 className={`text-lg font-bold ${isDark ? 'text-[#f0eef8]' : 'text-slate-900'}`}>{exp.role}</h3>
+                        <h3 className={`text-lg font-bold ${isDark ? 'text-[#f0eef8]' : 'text-slate-900'}`}>{job.role}</h3>
                         <p className={`font-semibold ${isDark ? 'text-purple-300' : 'text-violet-700'}`}>{exp.company}</p>
-                        <p className={`text-sm mt-0.5 ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>{exp.type}</p>
+                        <p className={`text-sm mt-0.5 ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>{job.type}</p>
                       </div>
                     </div>
                     <div className="flex flex-col items-start sm:items-end gap-1.5 shrink-0">
-                      <span className={`text-sm font-medium ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>{exp.period}</span>
+                      <span className={`text-sm font-medium ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>{job.period}</span>
                     </div>
                   </div>
 
                   <ul className="mb-5 space-y-2.5">
-                    {exp.highlights.map((item, j) => (
+                    {job.highlights.map((item, j) => (
                       <li key={j} className={`flex items-start gap-2.5 text-sm ${isDark ? 'text-[#9b99b4]' : 'text-slate-700'}`}>
                         <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500/60 shrink-0" />
                         {item}
@@ -118,13 +88,14 @@ export default function Experience({ language, theme }) {
                         key={t}
                         className={`px-2.5 py-1 text-xs rounded-md border ${isDark ? 'bg-white/5 border-purple-500/10 text-[#9b99b4]' : 'bg-violet-50 border-violet-200 text-violet-700'}`}
                       >
-                        {t}
+                        {copy.techLabels[t] ?? t}
                       </span>
                     ))}
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

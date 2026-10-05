@@ -77,6 +77,51 @@ export const translations = {
       title: 'Trayectoria',
       subtitle: 'profesional',
       current: 'Actual',
+      techLabels: {
+        'Technical SEO': 'SEO técnico',
+        'AA accessibility': 'Accesibilidad AA',
+      },
+      jobs: [
+        {
+          role: 'Desarrolladora web – Full Stack',
+          period: 'Mar 2026 – Actualidad',
+          type: 'Remoto',
+          highlights: [
+            'Desarrollé los sitios elfrancesvillage.com en WordPress y clubsociale.com en Framer, desde la conceptualización y el diseño hasta su publicación.',
+            'Desarrollé y mantuve un portafolio personal en React, utilizando Git/GitHub para el control de versiones y Vercel para el despliegue.',
+            'Colaboré en la implementación y adaptación de proyectos basados en .NET, apoyando la evolución, el mantenimiento y la mejora de soluciones web.',
+            'Implementé estrategias de SEO técnico para mejorar el posicionamiento orgánico, el rendimiento y la visibilidad de los proyectos web.',
+            'Gestioné la migración y administración de 5 sitios web, incluidos dominios, alojamiento, configuración de servicios y la transición de Cloudways a Hostinger.',
+            'Administré cuentas de dominio en GoDaddy para garantizar la disponibilidad continua de los servicios y la continuidad operativa.',
+          ],
+        },
+        {
+          role: 'Desarrolladora web – Front-End',
+          period: 'Ago 2020 – Feb 2026',
+          type: 'Tiempo completo · Remoto',
+          highlights: [
+            'Mantuve y administré más de 10 sitios web creados en WordPress y Joomla, incluyendo actualizaciones de contenido, ajustes de diseño adaptable, actualizaciones del CMS y sus complementos, y optimizaciones de rendimiento.',
+            'Actualicé y mejoré más de 10 sitios institucionales y gubernamentales mediante la implementación de criterios de accesibilidad WCAG AA y ajustes en la estructura, la navegación y el contenido para mejorar el acceso y la usabilidad.',
+            'Implementé e integré la pasarela de pago Tilopay en 3 sitios web, habilitando pagos en línea y ampliando las capacidades de comercio electrónico.',
+            'Realicé mantenimiento correctivo y evolutivo de sitios web, identificando y resolviendo problemas de funcionalidad, visualización y compatibilidad entre dispositivos.',
+            'Optimicé sitios web mediante ajustes técnicos enfocados en mejorar el rendimiento, la velocidad de carga y la experiencia de usuario.',
+          ],
+        },
+        {
+          role: 'Desarrolladora web – Full Stack',
+          period: 'Jun 2018 – Ago 2020',
+          type: 'Tiempo completo · San José, CR',
+          highlights: [
+            'Desarrollé un complemento personalizado para sincronizar automáticamente el inventario entre un ERP y WooCommerce, eliminando las actualizaciones manuales de productos.',
+            'Desarrollé y mantuve más de 15 sitios corporativos con WordPress y PHP, integrando soluciones de front-end y back-end según los requisitos de cada proyecto.',
+            'Desarrollé y ajusté soluciones de front-end y back-end para proyectos basados en WordPress, atendiendo requisitos funcionales y mejoras de los sitios.',
+            'Administré bases de datos MySQL y SQL, realizando migraciones y copias de seguridad para respaldar la integridad, disponibilidad y continuidad de los datos.',
+            'Administré más de 15 sitios web mediante cPanel, gestionando la configuración del alojamiento y coordinando el seguimiento de incidentes técnicos con el centro de datos.',
+            'Asesoré a clientes sobre la actualización y selección de planes de alojamiento según las necesidades de capacidad y rendimiento de sus sitios.',
+            'Gestioné la compra y renovación de dominios mediante GoDaddy y NIC Costa Rica para garantizar la continuidad de los servicios asociados a los sitios web.',
+          ],
+        },
+      ],
     },
     projects: {
       label: 'Portafolio',
@@ -183,6 +228,51 @@ export const translations = {
       title: 'Professional',
       subtitle: 'journey',
       current: 'Current',
+      techLabels: {
+        'Technical SEO': 'Technical SEO',
+        'AA accessibility': 'AA accessibility',
+      },
+      jobs: [
+        {
+          role: 'Web Developer – Full Stack',
+          period: 'Mar 2026 – Currently',
+          type: 'Remote',
+          highlights: [
+            'Built the websites elfrancesvillage.com in WordPress and clubsociale.com in Framer from concept and design through production deployment.',
+            'Developed and maintained a personal portfolio in React, using Git/GitHub version control and Vercel deployment.',
+            'Collaborated on the implementation and adjustment of .NET-based projects, supporting the evolution, maintenance, and improvement of web solutions.',
+            'Implemented technical SEO strategies to improve organic positioning, performance, and visibility across web projects.',
+            'Managed migration and administration of 5 websites, including domains, hosting, service configuration, and the Cloudways to Hostinger transition.',
+            'Administered domain accounts through GoDaddy to ensure continued service availability and operational continuity.',
+          ],
+        },
+        {
+          role: 'Web Developer – Front-End',
+          period: 'Aug 2020 – Feb 2026',
+          type: 'Full-time · Remote',
+          highlights: [
+            'Maintained and administered more than 10 websites built in WordPress and Joomla, including content updates, responsive design fixes, CMS and plugin updates, and performance optimizations.',
+            'Updated and improved more than 10 institutional and governmental sites by implementing WCAG AA accessibility criteria, adjusting structure, navigation, and content to improve access and usability.',
+            'Implemented and integrated the Tilopay payment gateway on 3 websites, enabling online payments and expanding e-commerce capabilities.',
+            'Performed corrective and evolutionary maintenance on websites, identifying and resolving functionality, display, and compatibility issues across devices.',
+            'Optimized websites through technical adjustments focused on improving performance, loading speed, and user experience.',
+          ],
+        },
+        {
+          role: 'Web Developer – Full Stack',
+          period: 'Jun 2018 – Aug 2020',
+          type: 'Full-time · San José, CR',
+          highlights: [
+            'Developed a custom plugin to automatically sync inventory between an ERP and WooCommerce, eliminating manual product updates.',
+            'Developed and maintained more than 15 corporate sites using WordPress and PHP, integrating front-end and back-end solutions according to project requirements.',
+            'Developed and adjusted front-end and back-end solutions for WordPress-based projects, addressing functional requirements and site improvements.',
+            'Managed MySQL and SQL databases, performing migrations and backups to support data integrity, availability, and continuity.',
+            'Administered more than 15 websites through cPanel, managing hosting settings and coordinating technical incident follow-up with the data center.',
+            'Advised clients on hosting plan updates and selection based on capacity and site performance needs.',
+            'Managed domain purchases and renewals through GoDaddy and NIC Costa Rica to ensure continuity of associated website services.',
+          ],
+        },
+      ],
     },
     projects: {
       label: 'Portfolio',
