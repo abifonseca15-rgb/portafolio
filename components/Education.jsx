@@ -56,7 +56,7 @@ export default function Education({ language, theme }) {
     <section id="education" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-xs font-semibold text-purple-400 tracking-widest uppercase">
+          <span className={`text-xs font-semibold tracking-widest uppercase ${isDark ? 'text-purple-400' : 'text-violet-700'}`}>
             {copy.label}
           </span>
           <div className="flex-1 h-px bg-purple-500/15" />
@@ -84,12 +84,12 @@ export default function Education({ language, theme }) {
                         <p className={`font-semibold text-sm ${isDark ? 'text-purple-300' : 'text-violet-700'}`}>{edu.institution}</p>
                         <div className="flex items-center gap-1.5">
                           {edu.current && (
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs">
-                              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+                            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-500/10 border border-green-500/20 text-xs ${isDark ? 'text-green-400' : 'text-green-700'}`}>
+                              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse motion-reduce:animate-none" />
                               {copy.current}
                             </span>
                           )}
-                          <span className="text-xs text-[#9b99b4]">{edu.period}</span>
+                          <span className={`text-xs ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>{edu.period}</span>
                         </div>
                       </div>
                       <p className={`text-sm mt-1 leading-snug ${isDark ? 'text-[#f0eef8]' : 'text-slate-700'}`}>{edu.degree}</p>
@@ -122,7 +122,7 @@ export default function Education({ language, theme }) {
                       <span className="text-xl shrink-0">{cert.icon}</span>
                     )}
                     <div className="flex-1 min-w-0">
-                      <p className={`text-sm leading-snug truncate ${isDark ? 'text-[#f0eef8]' : 'text-slate-800'}`}>{cert.title}</p>
+                      <p className={`text-sm leading-snug break-words ${isDark ? 'text-[#f0eef8]' : 'text-slate-800'}`}>{cert.title}</p>
                       <p className={`text-xs mt-0.5 ${isDark ? 'text-[#9b99b4]' : 'text-slate-500'}`}>{cert.issuer}</p>
                     </div>
                   </div>
@@ -135,4 +135,3 @@ export default function Education({ language, theme }) {
     </section>
   );
 }
-

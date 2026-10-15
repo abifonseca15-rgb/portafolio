@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import { About } from '../components/About'
 import Contact from '../components/Contact'
@@ -21,29 +21,39 @@ function App() {
     setTheme((current) => (current === 'dark' ? 'light' : 'dark'))
   }
 
+  useEffect(() => {
+    document.documentElement.lang = language === 'es' ? 'es-CR' : 'en'
+    const skipLink = document.getElementById('skip-link')
+    if (skipLink) {
+      skipLink.textContent = language === 'es' ? 'Saltar al contenido' : 'Skip to content'
+    }
+  }, [language])
+
   return (
     <>
+      <Navbar
+        language={language}
+        toggleLanguage={toggleLanguage}
+        theme={theme}
+        toggleTheme={toggleTheme}
+      />
       <main
+        id="contenido"
+        tabIndex="-1"
         className="min-h-screen transition-colors duration-300"
         style={{
           backgroundColor: theme === 'dark' ? '#0f0f13' : '#f5f3ff',
           color: theme === 'dark' ? '#f0eef8' : '#1b1730',
         }}
       >
-        <Navbar
-          language={language}
-          toggleLanguage={toggleLanguage}
-          theme={theme}
-          toggleTheme={toggleTheme}
-        />
         <Hero language={language} theme={theme} />
         <About language={language} theme={theme} />
         <Experience language={language} theme={theme} />
         <Education language={language} theme={theme} />
         <Projects language={language} theme={theme} />
         <Contact language={language} theme={theme} />
-        <Footer language={language} theme={theme} />
       </main>
+      <Footer language={language} theme={theme} />
     </>
   )
 }

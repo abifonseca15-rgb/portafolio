@@ -9,9 +9,9 @@ export default function Hero({ language, theme }) {
 
   return (
     <section className={`relative min-h-screen flex items-center justify-center overflow-hidden grid-bg ${isDark ? 'text-[#f0eef8]' : 'text-slate-800'}`}>
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-purple-600/10 blur-3xl animate-blob pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-indigo-600/10 blur-3xl animate-blob pointer-events-none" style={{ animationDelay: "4s" }} />
-      <div className="absolute top-1/2 right-1/3 w-64 h-64 rounded-full bg-sky-600/8 blur-3xl animate-blob pointer-events-none" style={{ animationDelay: "2s" }} />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-purple-600/10 blur-3xl animate-blob motion-reduce:animate-none pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-indigo-600/10 blur-3xl animate-blob motion-reduce:animate-none pointer-events-none" style={{ animationDelay: "4s" }} />
+      <div className="absolute top-1/2 right-1/3 w-64 h-64 rounded-full bg-sky-600/8 blur-3xl animate-blob motion-reduce:animate-none pointer-events-none" style={{ animationDelay: "2s" }} />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-16">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
@@ -19,7 +19,7 @@ export default function Hero({ language, theme }) {
             <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-medium mb-6 animate-fade-up ${
               isDark ? 'bg-purple-500/10 border-purple-500/20 text-purple-300' : 'bg-violet-100 border-violet-200 text-violet-700'
             }`}>
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse motion-reduce:animate-none" />
               {copy.badge}
             </div>
 
@@ -67,8 +67,8 @@ export default function Hero({ language, theme }) {
 
           <div className="flex-shrink-0 flex flex-col items-center gap-6 animate-fade-up delay-200">
             <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500 via-indigo-500 to-sky-500 blur-sm opacity-50 animate-float" />
-              <div className="relative w-52 h-52 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-purple-600/30 to-indigo-600/20 border border-purple-500/30 flex items-center justify-center animate-float">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-500 via-indigo-500 to-sky-500 blur-sm opacity-50 animate-float motion-reduce:animate-none" />
+              <div className="relative w-52 h-52 sm:w-64 sm:h-64 rounded-full bg-gradient-to-br from-purple-600/30 to-indigo-600/20 border border-purple-500/30 flex items-center justify-center animate-float motion-reduce:animate-none">
                 <span className={`text-6xl sm:text-7xl font-bold select-none ${isDark ? 'gradient-text' : 'bg-gradient-to-br from-violet-800 via-indigo-800 to-sky-800 bg-clip-text text-transparent'}`}>AF</span>
               </div>
               <div className={`absolute -top-3 -right-4 px-3 py-1.5 border rounded-full text-xs font-medium shadow-lg ${
@@ -98,8 +98,8 @@ export default function Hero({ language, theme }) {
           </div>
         </div>
 
-        <div className="flex justify-center mt-16 animate-bounce">
-          <a href="#about" className="text-[#9b99b4]/50 hover:text-purple-400 transition-colors">
+        <div className="flex justify-center mt-16 animate-bounce motion-reduce:animate-none">
+          <a href="#about" className={`${isDark ? 'text-[#9b99b4]' : 'text-slate-600'} hover:text-purple-400 transition-colors`} aria-label={language === 'es' ? 'Desplazarse a Sobre mí' : 'Scroll to About'}>
             <ArrowDown size={20} />
           </a>
         </div>

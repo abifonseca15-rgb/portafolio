@@ -212,6 +212,9 @@ export default function Projects({ language, theme }) {
                 !isDark ? 'shadow-[0_0_0_1px_rgba(196,181,253,0.2)]' : ''
               }`}
             >
+              <span className="sr-only">
+                {language === 'es' ? '(se abre en una pestaña nueva)' : '(opens in a new tab)'}
+              </span>
               <div className="flex items-start justify-between">
                 <div>
                   <span className={`inline-block w-2 h-2 rounded-full ${project.dot} mb-2`} />
@@ -243,4 +246,3 @@ export default function Projects({ language, theme }) {
     </section>
   );
 }
-

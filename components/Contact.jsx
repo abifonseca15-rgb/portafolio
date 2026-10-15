@@ -14,14 +14,14 @@ const contactItems = [
     icon: MapPin,
     label: { es: 'Ubicación', en: 'Location' },
     value: 'San José, Costa Rica',
-    href: 'https://maps.google.com/?q=Cartago,Costa+Rica',
+    href: 'https://maps.google.com/?q=San+Jose,Costa+Rica',
     color: 'from-sky-500 to-cyan-500',
   },
   {
     icon: Linkedin,
     label: { es: 'LinkedIn', en: 'LinkedIn' },
     value: 'abigail-fonseca-contreras',
-    href: 'https://www.linkedin.com/in/abigail-fonseca-contreras-62240514/',
+    href: 'https://www.linkedin.com/in/abigail-fonseca-contreras-62240514a/',
     color: 'from-blue-500 to-sky-500',
   },
 ];
@@ -34,7 +34,7 @@ export default function Contact({ language, theme }) {
     <section id="contact" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-xs font-semibold text-purple-400 tracking-widest uppercase">
+          <span className={`text-xs font-semibold tracking-widest uppercase ${isDark ? 'text-purple-400' : 'text-violet-700'}`}>
             {copy.label}
           </span>
           <div className="flex-1 h-px bg-purple-500/15" />
@@ -57,6 +57,11 @@ export default function Contact({ language, theme }) {
               rel="noopener noreferrer"
               className={`glow-card rounded-2xl border p-6 flex flex-col gap-4 group ${isDark ? 'bg-[#17161f] border-purple-500/10' : 'bg-white border-slate-200'}`}
             >
+              {item.href.startsWith('http') && (
+                <span className="sr-only">
+                  {language === 'es' ? '(se abre en una pestaña nueva)' : '(opens in a new tab)'}
+                </span>
+              )}
               <div
                 className={`w-10 h-10 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg`}
               >
@@ -98,4 +103,3 @@ export default function Contact({ language, theme }) {
     </section>
   );
 }
-

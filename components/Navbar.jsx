@@ -22,11 +22,15 @@ export default function Navbar({ language, toggleLanguage, theme, toggleTheme })
           ? isDark
             ? "bg-[#0f0f13]/90 backdrop-blur-md border-b border-purple-500/10"
             : "bg-white/90 backdrop-blur-md border-b border-slate-200"
-          : "bg-transparent"
+          : isDark ? "bg-transparent" : "bg-[#f5f3ff]/95"
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-lg font-bold gradient-text tracking-tight">
+        <a
+          href="#contenido"
+          aria-label={language === 'es' ? 'AF, Abigail Fonseca, ir al inicio' : 'AF, Abigail Fonseca, go to home'}
+          className="text-lg font-bold gradient-text tracking-tight"
+        >
           AF
         </a>
 
@@ -45,18 +49,6 @@ export default function Navbar({ language, toggleLanguage, theme, toggleTheme })
               </li>
             ))}
             <li>
-              <a
-                href="#contact"
-                className={`text-sm px-4 py-2 rounded-full border transition-all duration-200 ${
-                  isDark
-                    ? 'border-purple-500/40 text-[#c084fc] hover:bg-purple-500/10'
-                    : 'border-violet-200 text-violet-700 bg-violet-50 hover:bg-violet-100'
-                }`}
-              >
-                {language === 'es' ? 'Contáctame' : 'Contact me'}
-              </a>
-            </li>
-            <li>
               <button
                 type="button"
                 onClick={toggleLanguage}
@@ -65,7 +57,7 @@ export default function Navbar({ language, toggleLanguage, theme, toggleTheme })
                     ? 'border-purple-500/30 bg-[#17161f]/80 text-purple-200 hover:bg-purple-500/10'
                     : 'border-violet-200 bg-white text-violet-700 hover:bg-violet-50'
                 }`}
-                aria-label="Toggle language"
+                aria-label={language === 'es' ? 'EN - Cambiar idioma a inglés' : 'ES - Change language to Spanish'}
               >
                 {language === 'es' ? 'EN' : 'ES'}
               </button>
@@ -90,19 +82,22 @@ export default function Navbar({ language, toggleLanguage, theme, toggleTheme })
 
         <div className="flex items-center gap-3 md:hidden">
           <button
-            className="text-[#9b99b4] hover:text-[#c084fc]"
+            className={`${isDark ? 'text-[#9b99b4]' : 'text-slate-600'} hover:text-[#c084fc]`}
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
+            aria-label={language === 'es'
+              ? (menuOpen ? 'Cerrar menú' : 'Abrir menú')
+              : (menuOpen ? 'Close menu' : 'Open menu')}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </nav>
 
-      {menuOpen && (
-        <div className={`md:hidden backdrop-blur-md border-t px-6 py-6 ${
-          isDark ? 'bg-[#17161f]/95 border-purple-500/10' : 'bg-white/95 border-slate-200'
-        }`}>
+      <div id="mobile-navigation" hidden={!menuOpen} className={`md:hidden backdrop-blur-md border-t px-6 py-6 ${
+        isDark ? 'bg-[#17161f]/95 border-purple-500/10' : 'bg-white/95 border-slate-200'
+      }`}>
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -126,7 +121,7 @@ export default function Navbar({ language, toggleLanguage, theme, toggleTheme })
                     ? 'border-purple-500/30 bg-[#17161f]/80 text-purple-200'
                     : 'border-violet-200 bg-white text-violet-700'
                 }`}
-                aria-label="Toggle language"
+                aria-label={language === 'es' ? 'EN - Cambiar idioma a inglés' : 'ES - Change language to Spanish'}
               >
                 {language === 'es' ? 'EN' : 'ES'}
               </button>
@@ -147,9 +142,7 @@ export default function Navbar({ language, toggleLanguage, theme, toggleTheme })
               </button>
             </li>
           </ul>
-        </div>
-      )}
+      </div>
     </header>
   );
 }
-
