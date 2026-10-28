@@ -2,7 +2,6 @@ import React from 'react'
 
 import { MapPin, Mail, ArrowDown, Download } from "lucide-react";
 import { translations } from '../src/translations';
-import cv from '../src/assets/CV - Abigail Fonseca Contreras.pdf';
 
 export default function Hero({ language, theme }) {
   const copy = translations[language].hero;
@@ -64,7 +63,7 @@ export default function Hero({ language, theme }) {
                 {copy.ctaSecondary}
               </a>
               <a
-                href={cv}
+                href="/CV%20-%20Abigail%20Fonseca%20Contreras.pdf"
                 download="Abigail-Fonseca-CV.pdf"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-purple-500/30 text-[#c084fc] text-sm font-medium hover:bg-purple-500/10 transition-all duration-200"
               >
