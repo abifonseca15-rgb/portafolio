@@ -23,7 +23,7 @@ export const translations = {
     cookieConsent: {
       title: 'Uso de cookies',
       description:
-        'Usamos cookies de análisis de Google Analytics 4 para entender cómo se utiliza este sitio. GA4 solo se activa si aceptas. Puedes rechazar las cookies y seguir navegando.',
+        'Este sitio web utiliza cookies de Google Analytics para medir cómo se usa y mejorar tu experiencia. Solo se activan si las aceptas.',
       accept: 'Aceptar',
       reject: 'Rechazar',
     },
