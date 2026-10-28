@@ -20,6 +20,13 @@ export const translations = {
       email: 'abifonseca15@gmail.com',
       years: '7+ años',
     },
+    cookieConsent: {
+      title: 'Uso de cookies',
+      description:
+        'Usamos cookies de análisis de Google Analytics 4 para entender cómo se utiliza este sitio. GA4 solo se activa si aceptas. Puedes rechazar las cookies y seguir navegando.',
+      accept: 'Aceptar',
+      reject: 'Rechazar',
+    },
     about: {
       label: 'Sobre mí',
       headingPart1: 'Quién',
@@ -154,6 +161,13 @@ export const translations = {
       location: 'San José, Costa Rica',
       email: 'abifonseca15@gmail.com',
       years: '7+ years',
+    },
+    cookieConsent: {
+      title: 'Cookie use',
+      description:
+        'We use Google Analytics 4 analytics cookies to understand how this site is used. GA4 is only activated if you accept. You can reject cookies and continue browsing.',
+      accept: 'Accept',
+      reject: 'Reject',
     },
     about: {
       label: 'About me',

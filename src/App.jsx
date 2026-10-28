@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { About } from '../components/About'
 import Contact from '../components/Contact'
+import CookieBanner from '../components/CookieBanner'
 import Education from '../components/Education'
 import Experience from '../components/Experience'
 import Footer from '../components/Footer'
@@ -88,6 +89,7 @@ function App() {
         <Contact language={language} theme={theme} />
       </main>
       <Footer language={language} theme={theme} />
+      <CookieBanner language={language} theme={theme} />
     </>
   )
 }
