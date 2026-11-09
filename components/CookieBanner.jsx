@@ -87,7 +87,7 @@ export default function CookieBanner({ language, theme }) {
           <button
             type="button"
             onClick={() => chooseConsent('accepted')}
-            className="rounded-full bg-purple-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-purple-500"
+            className="rounded-full bg-purple-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-purple-700"
           >
             {copy.accept}
           </button>

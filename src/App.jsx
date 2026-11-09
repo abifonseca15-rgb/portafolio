@@ -13,7 +13,7 @@ import Servicios from '../components/Servicios'
 
 function App() {
   const [language, setLanguage] = useState('es')
-  const [theme, setTheme] = useState('dark')
+  const [theme, setTheme] = useState('light')
 
   const toggleLanguage = () => {
     setLanguage((current) => (current === 'es' ? 'en' : 'es'))
@@ -30,6 +30,10 @@ function App() {
       skipLink.textContent = language === 'es' ? 'Saltar al contenido' : 'Skip to content'
     }
   }, [language])
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+  }, [theme])
 
   useEffect(() => {
     const onClick = (event) => {

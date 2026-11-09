@@ -101,7 +101,7 @@ export default function Navbar({ language, toggleLanguage, theme, toggleTheme })
           <button
             ref={menuButtonRef}
             type="button"
-            className={`${isDark ? 'text-[#9b99b4]' : 'text-slate-600'} hover:text-[#c084fc]`}
+            className={`${isDark ? 'text-[#9b99b4] hover:text-[#c084fc]' : 'text-slate-600 hover:text-violet-800'}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={language === 'es'
               ? (menuOpen ? 'Cerrar menú' : 'Abrir menú')

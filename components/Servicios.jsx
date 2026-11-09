@@ -76,7 +76,7 @@ export default function Servicios({ language, theme }) {
         <div className="mt-10 text-center">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center rounded-full bg-purple-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-purple-900/30 transition-colors hover:bg-purple-500"
+            className="inline-flex items-center justify-center rounded-full bg-purple-600 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-purple-900/30 transition-colors hover:bg-purple-700"
           >
             {copy.cta}
           </a>

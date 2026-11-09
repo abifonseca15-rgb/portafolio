@@ -84,7 +84,7 @@ export default function Education({ language, theme }) {
                         <p className={`font-semibold text-sm ${isDark ? 'text-purple-300' : 'text-violet-700'}`}>{edu.institution}</p>
                         <div className="flex items-center gap-1.5">
                           {edu.current && (
-                            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-500/10 border border-green-500/20 text-xs ${isDark ? 'text-green-400' : 'text-green-700'}`}>
+                            <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-500/10 border border-green-500/20 text-xs ${isDark ? 'text-green-400' : 'text-green-800'}`}>
                               <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse motion-reduce:animate-none" />
                               {copy.current}
                             </span>
@@ -93,7 +93,7 @@ export default function Education({ language, theme }) {
                         </div>
                       </div>
                       <p className={`text-sm mt-1 leading-snug ${isDark ? 'text-[#f0eef8]' : 'text-slate-700'}`}>{edu.degree}</p>
-                      <p className={`text-xs mt-1 ${isDark ? 'text-[#9b99b4]' : 'text-slate-500'}`}>{edu.location}</p>
+                      <p className={`text-xs mt-1 ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>{edu.location}</p>
                     </div>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ export default function Education({ language, theme }) {
                     )}
                     <div className="flex-1 min-w-0">
                       <p className={`text-sm leading-snug break-words ${isDark ? 'text-[#f0eef8]' : 'text-slate-800'}`}>{cert.title}</p>
-                      <p className={`text-xs mt-0.5 ${isDark ? 'text-[#9b99b4]' : 'text-slate-500'}`}>{cert.issuer}</p>
+                      <p className={`text-xs mt-0.5 ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>{cert.issuer}</p>
                     </div>
                   </div>
                 );

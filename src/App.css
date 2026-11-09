@@ -141,6 +141,12 @@ body {
   background-clip: text;
 }
 
+html[data-theme='light'] .gradient-text {
+  background: none;
+  color: #5b21b6;
+  -webkit-text-fill-color: currentColor;
+}
+
 /* Glow card */
 .glow-card {
   box-shadow:

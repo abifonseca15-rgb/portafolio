@@ -52,20 +52,24 @@ export default function Hero({ language, theme }) {
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start animate-fade-up delay-400">
               <a
                 href="#projects"
-                className="px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white text-sm font-medium transition-all duration-200 shadow-lg shadow-purple-900/30 hover:shadow-purple-700/40"
+                className="px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium transition-all duration-200 shadow-lg shadow-purple-900/30 hover:shadow-purple-700/40"
               >
                 {copy.ctaPrimary}
               </a>
               <a
                 href="#contact"
-                className="px-6 py-3 rounded-full border border-purple-500/30 text-[#c084fc] text-sm font-medium hover:bg-purple-500/10 transition-all duration-200"
+                className={`px-6 py-3 rounded-full border border-purple-500/30 text-sm font-medium transition-all duration-200 ${
+                  isDark ? 'text-[#c084fc] hover:bg-purple-500/10' : 'text-violet-800 hover:bg-violet-50'
+                }`}
               >
                 {copy.ctaSecondary}
               </a>
               <a
                 href="/CV%20-%20Abigail%20Fonseca%20Contreras.pdf"
                 download="Abigail-Fonseca-CV.pdf"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-purple-500/30 text-[#c084fc] text-sm font-medium hover:bg-purple-500/10 transition-all duration-200"
+                className={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-purple-500/30 text-sm font-medium transition-all duration-200 ${
+                  isDark ? 'text-[#c084fc] hover:bg-purple-500/10' : 'text-violet-800 hover:bg-violet-50'
+                }`}
               >
                 <Download size={16} aria-hidden="true" />
                 {copy.ctaResume}
@@ -107,7 +111,7 @@ export default function Hero({ language, theme }) {
         </div>
 
         <div className="flex justify-center mt-16 animate-bounce motion-reduce:animate-none">
-          <a href="#about" className={`${isDark ? 'text-[#9b99b4]' : 'text-slate-600'} hover:text-purple-400 transition-colors`} aria-label={language === 'es' ? 'Desplazarse a Sobre mí' : 'Scroll to About'}>
+          <a href="#about" className={`${isDark ? 'text-[#9b99b4] hover:text-purple-400' : 'text-slate-600 hover:text-violet-800'} transition-colors`} aria-label={language === 'es' ? 'Desplazarse a Sobre mí' : 'Scroll to About'}>
             <ArrowDown size={20} />
           </a>
         </div>

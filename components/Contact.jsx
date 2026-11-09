@@ -69,7 +69,7 @@ export default function Contact({ language, theme }) {
               </div>
 
               <div>
-                <p className={`text-xs mb-1 ${isDark ? 'text-[#9b99b4]' : 'text-slate-500'}`}>
+                <p className={`text-xs mb-1 ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>
                   {item.label[language]}
                 </p>
                 <p className={`font-medium text-sm transition-colors ${isDark ? 'text-[#f0eef8] group-hover:text-purple-300' : 'text-slate-800 group-hover:text-violet-700'}`}>
@@ -92,7 +92,7 @@ export default function Contact({ language, theme }) {
 
             <a
               href="mailto:abifonseca15@gmail.com"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium text-sm transition-all duration-200 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/50"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-purple-600 hover:bg-purple-700 text-white font-medium text-sm transition-all duration-200 shadow-lg shadow-purple-900/40 hover:shadow-purple-700/50"
             >
               <Mail size={16} />
               {copy.ctaAction}
