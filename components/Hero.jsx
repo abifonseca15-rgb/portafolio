@@ -8,7 +8,7 @@ export default function Hero({ language, theme }) {
   const isDark = theme === 'dark';
 
   return (
-    <section className={`relative min-h-screen flex items-center justify-center overflow-hidden grid-bg ${isDark ? 'text-[#f0eef8]' : 'text-slate-800'}`}>
+    <section aria-labelledby="hero-title" className={`relative min-h-screen flex items-center justify-center overflow-hidden grid-bg ${isDark ? 'text-[#f0eef8]' : 'text-slate-800'}`}>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-purple-600/10 blur-3xl animate-blob motion-reduce:animate-none pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-indigo-600/10 blur-3xl animate-blob motion-reduce:animate-none pointer-events-none" style={{ animationDelay: "4s" }} />
       <div className="absolute top-1/2 right-1/3 w-64 h-64 rounded-full bg-sky-600/8 blur-3xl animate-blob motion-reduce:animate-none pointer-events-none" style={{ animationDelay: "2s" }} />
@@ -23,7 +23,7 @@ export default function Hero({ language, theme }) {
               {copy.badge}
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 animate-fade-up delay-100">
+            <h1 id="hero-title" className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 animate-fade-up delay-100">
               {copy.greeting}{" "}
               <span className="gradient-text block sm:inline">
                 Abigail Fonseca

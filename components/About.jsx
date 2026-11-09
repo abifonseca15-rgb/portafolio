@@ -7,7 +7,7 @@ export const About = ({ language, theme }) => {
   const softSkills = copy.softSkillItems;
 
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" aria-labelledby="about-title" tabIndex="-1" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-4">
           <span className={`text-xs font-semibold tracking-widest uppercase ${isDark ? 'text-purple-400' : 'text-violet-700'}`}>
@@ -16,7 +16,7 @@ export const About = ({ language, theme }) => {
           <div className="flex-1 h-px bg-purple-500/15" />
         </div>
 
-        <h2 className="text-3xl sm:text-4xl font-bold mb-12">
+        <h2 id="about-title" className="text-3xl sm:text-4xl font-bold mb-12">
           {copy.headingPart1} <span className="gradient-text">{copy.headingPart2}</span>
         </h2>
 

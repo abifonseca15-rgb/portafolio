@@ -31,7 +31,7 @@ export default function Contact({ language, theme }) {
   const isDark = theme === 'dark';
 
   return (
-    <section id="contact" className="py-24 px-6">
+    <section id="contact" aria-labelledby="contact-title" tabIndex="-1" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-4">
           <span className={`text-xs font-semibold tracking-widest uppercase ${isDark ? 'text-purple-400' : 'text-violet-700'}`}>
@@ -40,7 +40,7 @@ export default function Contact({ language, theme }) {
           <div className="flex-1 h-px bg-purple-500/15" />
         </div>
 
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        <h2 id="contact-title" className="text-3xl sm:text-4xl font-bold mb-4">
           {copy.heading} <span className="gradient-text">{copy.highlight}</span>
         </h2>
 

@@ -185,7 +185,7 @@ export default function Projects({ language, theme }) {
   const isDark = theme === 'dark';
 
   return (
-    <section id="projects" className={`py-24 px-6 ${isDark ? 'bg-[#17161f]/40' : 'bg-slate-50/80'}`}>
+    <section id="projects" aria-labelledby="projects-title" tabIndex="-1" className={`py-24 px-6 ${isDark ? 'bg-[#17161f]/40' : 'bg-slate-50/80'}`}>
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-3 mb-4">
           <span className={`text-xs font-semibold tracking-widest uppercase ${isDark ? 'text-purple-400' : 'text-violet-700'}`}>
@@ -194,7 +194,7 @@ export default function Projects({ language, theme }) {
           <div className={`flex-1 h-px ${isDark ? 'bg-purple-500/15' : 'bg-violet-200'}`} />
         </div>
 
-        <h2 className={`text-3xl sm:text-4xl font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+        <h2 id="projects-title" className={`text-3xl sm:text-4xl font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>
           {copy.heading} <span className="gradient-text">{copy.highlight}</span>
         </h2>
         <p className={`text-base mb-12 max-w-xl ${isDark ? 'text-[#9b99b4]' : 'text-slate-700'}`}>

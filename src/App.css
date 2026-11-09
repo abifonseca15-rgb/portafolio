@@ -43,6 +43,20 @@ html {
   scroll-padding-top: 5rem;
 }
 
+*:focus-visible {
+  outline: 3px solid #7c3aed;
+  outline-offset: 3px;
+}
+
+main:focus-visible,
+section[id]:focus-visible {
+  outline: none;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 .skip-link {
   position: fixed;
   top: 0.5rem;

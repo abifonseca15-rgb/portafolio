@@ -1,11 +1,11 @@
-import React from 'react'
-import { useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from 'react'
 import { Menu, X } from "lucide-react";
 import { translations } from '../src/translations';
 
 export default function Navbar({ language, toggleLanguage, theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef(null);
   const navLinks = translations[language].nav;
   const isDark = theme === 'dark';
 
@@ -14,6 +14,20 @@ export default function Navbar({ language, toggleLanguage, theme, toggleTheme })
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [menuOpen]);
 
   return (
     <header
@@ -25,7 +39,10 @@ export default function Navbar({ language, toggleLanguage, theme, toggleTheme })
           : isDark ? "bg-transparent" : "bg-[#f5f3ff]/95"
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav
+        aria-label={language === 'es' ? 'Navegación principal' : 'Main navigation'}
+        className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
         <a
           href="#contenido"
           aria-label={language === 'es' ? 'AF, Abigail Fonseca, ir al inicio' : 'AF, Abigail Fonseca, go to home'}
@@ -82,6 +99,8 @@ export default function Navbar({ language, toggleLanguage, theme, toggleTheme })
 
         <div className="flex items-center gap-3 md:hidden">
           <button
+            ref={menuButtonRef}
+            type="button"
             className={`${isDark ? 'text-[#9b99b4]' : 'text-slate-600'} hover:text-[#c084fc]`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={language === 'es'

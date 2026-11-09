@@ -9,6 +9,7 @@ import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import Navbar from '../components/Navbar'
 import Projects from '../components/Projects'
+import Servicios from '../components/Servicios'
 
 function App() {
   const [language, setLanguage] = useState('es')
@@ -83,6 +84,7 @@ function App() {
       >
         <Hero language={language} theme={theme} />
         <About language={language} theme={theme} />
+        <Servicios language={language} theme={theme} />
         <Experience language={language} theme={theme} />
         <Education language={language} theme={theme} />
         <Projects language={language} theme={theme} />

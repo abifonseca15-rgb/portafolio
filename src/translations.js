@@ -2,6 +2,7 @@ export const translations = {
   es: {
     nav: [
       { label: 'Sobre mí', href: '#about' },
+      { label: 'Servicios', href: '#services' },
       { label: 'Experiencia', href: '#experience' },
       { label: 'Educación', href: '#education' },
       { label: 'Proyectos', href: '#projects' },
@@ -26,6 +27,46 @@ export const translations = {
         'Este sitio web utiliza cookies de Google Analytics para medir cómo se usa y mejorar tu experiencia. Solo se activan si las aceptas.',
       accept: 'Aceptar',
       reject: 'Rechazar',
+    },
+    services: {
+      label: 'Servicios',
+      title: '¿Cómo puedo',
+      titleAccent: 'ayudarte?',
+      intro:
+        'Desarrollo y mantengo sitios web accesibles, responsivos y de alto rendimiento para empresas e instituciones.',
+      cta: 'Cuéntame tu proyecto',
+      items: [
+        {
+          title: 'Desarrollo de sitios web',
+          description:
+            'Creo sitios web a medida desde la conceptualización y el diseño hasta su publicación.',
+        },
+        {
+          title: 'Mantenimiento y optimización',
+          description:
+            'Doy mantenimiento a sitios web, actualizo contenido y mejoro el rendimiento, la velocidad y la compatibilidad móvil.',
+        },
+        {
+          title: 'Accesibilidad web',
+          description:
+            'Mejoro la estructura, navegación y contenido de sitios para facilitar su uso e implementar criterios de accesibilidad WCAG AA.',
+        },
+        {
+          title: 'SEO técnico y analítica',
+          description:
+            'Implemento SEO técnico, Google Analytics, Meta Pixel y datos estructurados Schema.org para apoyar la medición y visibilidad en buscadores.',
+        },
+        {
+          title: 'Comercio electrónico y pagos',
+          description:
+            'Integro soluciones de comercio electrónico con WooCommerce y pasarelas de pago como Tilopay.',
+        },
+        {
+          title: 'Hosting, dominios y migraciones',
+          description:
+            'Administro servicios de hosting y dominios, incluyendo su configuración, gestión y mantenimiento, garantizando el correcto funcionamiento y disponibilidad de los sitios web.',
+        },
+      ],
     },
     about: {
       label: 'Sobre mí',
@@ -144,6 +185,7 @@ export const translations = {
   en: {
     nav: [
       { label: 'About', href: '#about' },
+      { label: 'Services', href: '#services' },
       { label: 'Experience', href: '#experience' },
       { label: 'Education', href: '#education' },
       { label: 'Projects', href: '#projects' },
@@ -168,6 +210,46 @@ export const translations = {
         'We use Google Analytics 4 analytics cookies to understand how this site is used. GA4 is only activated if you accept. You can reject cookies and continue browsing.',
       accept: 'Accept',
       reject: 'Reject',
+    },
+    services: {
+      label: 'Services',
+      title: 'How can I',
+      titleAccent: 'help you?',
+      intro:
+        'I develop and maintain accessible, responsive, and high-performance websites for businesses and institutions.',
+      cta: 'Tell me about your project',
+      items: [
+        {
+          title: 'Website development',
+          description:
+            'I create custom websites from concept and design through launch.',
+        },
+        {
+          title: 'Maintenance and optimization',
+          description:
+            'I maintain websites, update content, and improve performance, loading speed, and mobile compatibility.',
+        },
+        {
+          title: 'Web accessibility',
+          description:
+            'I improve website structure, navigation, and content to make sites easier to use and implement WCAG AA accessibility criteria.',
+        },
+        {
+          title: 'Technical SEO and analytics',
+          description:
+            'I implement technical SEO, Google Analytics, Meta Pixel, and Schema.org structured data to support measurement and search visibility.',
+        },
+        {
+          title: 'E-commerce and payments',
+          description:
+            'I integrate e-commerce solutions with WooCommerce and payment gateways such as Tilopay.',
+        },
+        {
+          title: 'Hosting, domains, and migrations',
+          description:
+            'I manage hosting and domain services, including their configuration, administration, and maintenance, ensuring websites function correctly and remain available.',
+        },
+      ],
     },
     about: {
       label: 'About me',
