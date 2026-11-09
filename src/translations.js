@@ -102,6 +102,10 @@ export const translations = {
       academic: 'Formación Académica',
       certificates: 'Cursos y Certificaciones',
       current: 'En curso',
+      issued: 'Expedición',
+      credentialId: 'ID de la credencial',
+      verify: 'Verificar certificado',
+      physical: 'Certificación en físico',
     },
     experience: {
       label: 'Experiencia',
@@ -285,6 +289,10 @@ export const translations = {
       academic: 'Academic training',
       certificates: 'Certifications',
       current: 'In progress',
+      issued: 'Issued',
+      credentialId: 'Credential ID',
+      verify: 'Verify certificate',
+      physical: 'Physical certificate',
     },
     experience: {
       label: 'Experience',

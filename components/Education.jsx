@@ -3,6 +3,7 @@ import React from 'react'
 import {
   GraduationCap,
   Award,
+  ExternalLink,
 } from "lucide-react";
 import { translations } from '../src/translations';
 
@@ -37,15 +38,77 @@ const education = [
 ];
 
 const certificates = [
-  { title: 'Claude 101', issuer: 'Anthropic', icon: '🤖' },
-  { title: 'SEO: Structured Data & Schema Markup for Webmasters', issuer: 'Udemy', icon: '🔍' },
-  { title: 'WAI0.1x: Introduction to Web Accessibility', issuer: 'edX', icon: '♿' },
-  { title: 'React – The Complete Guide 2024 (incl. Next.js, Redux)', issuer: 'Udemy', icon: '⚛️' },
-  { title: 'Software Testing Masterclass (2024)', issuer: 'Udemy', icon: '🧪' },
-  { title: 'Modern PHP: The Complete Guide – Beginner to Advanced', issuer: 'Udemy', icon: '🐘' },
-  { title: 'The Ultimate MySQL Bootcamp: SQL Beginner to Expert', issuer: 'Udemy', icon: '🗄️' },
-  { title: 'Aprende Joomla! 5.x', issuer: 'Udemy', icon: '🌐' },
-  { title: 'Certificado en Adobe Photoshop', issuer: 'ESCADI', icon: '🎨' },
+  {
+    title: { es: 'Certificado de finalización: Claude 101', en: 'Certificate of completion: Claude 101' },
+    issuer: 'Anthropic',
+    issued: { es: 'ago. de 2026', en: 'Aug 2026' },
+    credentialId: 'byv38msi3gs8',
+    verificationUrl: 'https://verify.skilljar.com/c/byv38msi3gs8',
+    icon: '🤖',
+  },
+  {
+    title: 'SEO: Structured Data & Schema Markup for Webmasters',
+    issuer: 'Udemy',
+    issued: { es: 'ene. de 2026', en: 'Jan 2026' },
+    credentialId: 'UC-96595e22-e761-43ed-947f-bb951f578498',
+    verificationUrl: 'https://www.udemy.com/certificate/UC-96595e22-e761-43ed-947f-bb951f578498/',
+    icon: '🔍',
+  },
+  {
+    title: { es: 'Certificado verificado: Introduction to Web Accessibility', en: 'Verified Certificate for Introduction to Web Accessibility' },
+    issuer: 'edX',
+    issued: { es: 'jul. de 2025', en: 'Jul 2025' },
+    credentialId: 'b9d07f824d5d43bda7612ab78d39790c',
+    verificationUrl: 'https://courses.edx.org/certificates/b9d07f824d5d43bda7612ab78d39790c',
+    icon: '♿',
+  },
+  {
+    title: 'React – The Complete Guide 2024 (incl. Next.js, Redux)',
+    issuer: 'Udemy',
+    issued: { es: 'nov. de 2024', en: 'Nov 2024' },
+    credentialId: 'UC-85a3e860-fff8-40cf-a0c9-69b193e2c3c9',
+    verificationUrl: 'https://www.udemy.com/certificate/UC-85a3e860-fff8-40cf-a0c9-69b193e2c3c9/',
+    icon: '⚛️',
+  },
+  {
+    title: 'Software Testing Masterclass (2024)',
+    issuer: 'Udemy',
+    issued: { es: '10 de junio de 2024', en: 'Jun 10, 2024' },
+    credentialId: 'UC-605d8f82-4623-425c-ada1-183cbba2faf2',
+    verificationUrl: 'https://www.udemy.com/certificate/UC-605d8f82-4623-425c-ada1-183cbba2faf2/',
+    icon: '🧪',
+  },
+  {
+    title: 'Modern PHP: The Complete Guide - from Beginner to Advanced',
+    issuer: 'Udemy',
+    issued: { es: 'jun. de 2024', en: 'Jun 2024' },
+    credentialId: 'UC-8e597cb2-781f-4482-85d7-75a9c76f5690',
+    verificationUrl: 'https://www.udemy.com/certificate/UC-8e597cb2-781f-4482-85d7-75a9c76f5690/',
+    icon: '🐘',
+  },
+  {
+    title: 'The Ultimate MySQL Bootcamp: Go from SQL Beginner to Expert',
+    issuer: 'Udemy',
+    issued: { es: 'jun. de 2024', en: 'Jun 2024' },
+    credentialId: 'UC-1ae8ed8e-0181-448e-9169-e288096996cc',
+    verificationUrl: 'https://www.udemy.com/certificate/UC-1ae8ed8e-0181-448e-9169-e288096996cc/',
+    icon: '🗄️',
+  },
+  {
+    title: 'Aprende Joomla! 5.x',
+    issuer: 'Udemy',
+    issued: { es: '21 de nov. de 2024', en: 'Nov 21, 2024' },
+    credentialId: 'UC-373a9aac-4fa5-4bf2-903f-2166e2b30fa2',
+    verificationUrl: 'https://www.udemy.com/certificate/UC-373a9aac-4fa5-4bf2-903f-2166e2b30fa2/',
+    icon: '🌐',
+  },
+  {
+    title: 'Certificado en Adobe Photoshop',
+    issuer: 'ESCADI S.A',
+    issued: { es: '14 de abril de 2021', en: 'Apr 14, 2021' },
+    physical: true,
+    icon: '🎨',
+  },
 ];
 
 export default function Education({ language, theme }) {
@@ -122,8 +185,38 @@ export default function Education({ language, theme }) {
                       <span className="text-xl shrink-0">{cert.icon}</span>
                     )}
                     <div className="flex-1 min-w-0">
-                      <p className={`text-sm leading-snug break-words ${isDark ? 'text-[#f0eef8]' : 'text-slate-800'}`}>{cert.title}</p>
+                      <p className={`text-sm leading-snug break-words ${isDark ? 'text-[#f0eef8]' : 'text-slate-800'}`}>
+                        {typeof cert.title === 'string' ? cert.title : cert.title[language]}
+                      </p>
                       <p className={`text-xs mt-0.5 ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>{cert.issuer}</p>
+                      <p className={`text-xs mt-1 ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>
+                        {copy.issued}: {cert.issued[language]}
+                      </p>
+                      {cert.credentialId && (
+                        <p className={`mt-1 break-all text-xs ${isDark ? 'text-[#9b99b4]' : 'text-slate-600'}`}>
+                          {copy.credentialId}: {cert.credentialId}
+                        </p>
+                      )}
+                      {cert.verificationUrl ? (
+                        <a
+                          href={cert.verificationUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`mt-2 inline-flex items-center gap-1 text-sm font-medium underline underline-offset-2 ${
+                            isDark ? 'text-purple-300 hover:text-purple-200' : 'text-violet-800 hover:text-violet-900'
+                          }`}
+                        >
+                          {copy.verify}
+                          <ExternalLink size={14} aria-hidden="true" />
+                          <span className="sr-only">
+                            {language === 'es' ? '(se abre en una pestaña nueva)' : '(opens in a new tab)'}
+                          </span>
+                        </a>
+                      ) : cert.physical ? (
+                        <p className={`mt-2 text-sm ${isDark ? 'text-[#b8b5ca]' : 'text-slate-700'}`}>
+                          {copy.physical}
+                        </p>
+                      ) : null}
                     </div>
                   </div>
                 );
