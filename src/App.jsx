@@ -13,7 +13,7 @@ import Servicios from '../components/Servicios'
 
 function App() {
   const [language, setLanguage] = useState('es')
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
 
   const toggleLanguage = () => {
     setLanguage((current) => (current === 'es' ? 'en' : 'es'))
