@@ -16,7 +16,7 @@ export const translations = {
         'Desarrolladora web apasionada por crear experiencias digitales accesibles, responsivas y elegantes. +7 años construyendo sitios que funcionan y se ven bien.',
       ctaPrimary: 'Ver proyectos',
       ctaSecondary: 'Contáctame',
-      ctaResume: 'Descargar CV',
+      ctaResume: 'Descargar CV (PDF)',
       location: 'San José, Costa Rica',
       email: 'abifonseca15@gmail.com',
       years: '7+ años',
